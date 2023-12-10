@@ -100,7 +100,10 @@ var specialCharacters = [
   
   // Function to generate password with user input
   function generatePassword() {
-  
+  var passwordLength = parseInt(prompt("Please enter the length of the password you like"))
+  if(passwordLength < 8 || passwordLength > 128 ){
+    return  "Please enter a valid length between 8-128"
+  }
   }
   
   // Get references to the #generate element
