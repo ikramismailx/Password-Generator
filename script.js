@@ -125,6 +125,17 @@ function generatePassword() {
     if(allCharacters.length === 0){
         return "Please choose at least one option"
     }
+    var password = ""
+
+
+    for(let i =0;i<passwordLength   ;i++){
+        var index = Math.floor (Math.random() * allCharacters.length)   
+        password += allCharacters[index] // password = password + allcharacters[index]
+    }
+    return password
+    
+
+    
 }
 
 // Get references to the #generate element
