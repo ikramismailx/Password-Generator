@@ -87,6 +87,21 @@ var upperCasedCharacters = [
     'Y',
     'Z'
 ];
+// Function to prompt user for password options
+var passwordOptions = [];
+
+function getLength () {
+    var length = prompt('How many characters would you like your password to have?');
+    console.log(length);
+    if (length < 8 || length > 123) {
+        alert("Error! Password MUST be between 8 and 128 characerters. Please input a different number!");
+        return getLength()
+    }
+
+    return length;
+    
+}
+
 
 // Function to generate password with user input
 function generatePassword() {
