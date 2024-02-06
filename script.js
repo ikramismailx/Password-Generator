@@ -136,36 +136,18 @@ function generatePassword() {
         console.log(passwordOptions);
     }
 
-    var validLowerCase = confirm("Do you like lowercase letters in the password?")
-    var validSpecialCharacters = confirm("Do you like special characters in the password?")
-    var validNumbers = confirm("Do you like numeric characters in the password?")
-    var allCharacters = []
-    if (validUpperCase) {
-        allCharacters = allCharacters.concat(upperCasedCharacters)
-    }
-    if (validLowerCase) {
-        allCharacters = allCharacters.concat(lowerCasedCharacters)
-    }
-    if (validSpecialCharacters) {
-        allCharacters = allCharacters.concat(specialCharacters)
-    }
-    if (validNumbers) {
-        allCharacters = allCharacters.concat(numericCharacters)
-    }
-    console.log(allCharacters)
-    if (allCharacters.length === 0) {
-        return "Please choose at least one option"
-    }
-    var password = ""
+    
+    console.log(passwordOptions);
+    var length = parseInt(length);
+    var password = '';
 
+    // randomising 
 
     for (let i = 0; i < passwordLength; i++) {
         var index = Math.floor(Math.random() * allCharacters.length)
         password += allCharacters[index] // password = password + allcharacters[index]
     }
-    return password
-
-
+    return password;
 
 }
 
