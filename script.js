@@ -99,16 +99,15 @@ function getLength () {
     }
 
     return length;
-    
+
 }
 
 
 // Function to generate password with user input
 function generatePassword() {
-    var passwordLength = parseInt(prompt("Please enter the length of the password you like"))
-    if (passwordLength < 8 || passwordLength > 128) {
-        return "Please enter a valid length between 8-128"
-    }
+    var length = getLength ();
+
+
     var validUpperCase = confirm("Do you like uppercase letters in the password?")
     var validLowerCase = confirm("Do you like lowercase letters in the password?")
     var validSpecialCharacters = confirm("Do you like special characters in the password?")
