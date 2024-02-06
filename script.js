@@ -128,6 +128,13 @@ function generatePassword() {
         passwordOptions = passwordOptions.concat(numericCharacters);
         console.log(passwordOptions);
     }
+    // special characters choice
+    var specialCharactersChoice = confirm("Do you want to include special characters in your password?");
+    console.log(specialCharactersChoice);
+    if (specialCharactersChoice === true) {
+        passwordOptions = passwordOptions.concat(specialCharacters);
+        console.log(passwordOptions);
+    }
 
     var validLowerCase = confirm("Do you like lowercase letters in the password?")
     var validSpecialCharacters = confirm("Do you like special characters in the password?")
