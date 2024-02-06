@@ -43,4 +43,4 @@ I welcome contributions and feedback! If you have suggestions for improvements, 
 
 # License
 
-This project is licensed under the [MIT]() License. You are free to use, modify, and distribute it, as long as you include the appropriate attribution and adhere to the terms of the license.
+This project is licensed under the [MIT](https://github.com/ikramismailx/Password-Generator/blob/main/LICENSE) License. You are free to use, modify, and distribute it, as long as you include the appropriate attribution and adhere to the terms of the license.
