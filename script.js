@@ -90,7 +90,7 @@ var upperCasedCharacters = [
 // Function to prompt user for password options
 var passwordOptions = [];
 
-function getLength () {
+function getLength() {
     var length = prompt('How many characters would you like your password to have?');
     console.log(length);
     if (length < 8 || length > 123) {
@@ -105,15 +105,22 @@ function getLength () {
 
 // Function to generate password with user input
 function generatePassword() {
-    var length = getLength ();
+    var length = getLength();
 
     // upper-case characters choice
     var upperCasedCharactersChoice = confirm("Do you want to include upper-case characters in your password?");
     console.log(upperCasedCharactersChoice);
     if (upperCasedCharactersChoice === true) {
-      passwordOptions = passwordOptions.concat(upperCasedCharacters);
-     console.log(passwordOptions);
-}
+        passwordOptions = passwordOptions.concat(upperCasedCharacters);
+        console.log(passwordOptions);
+    }
+    // lower-case characters choice
+    var lowerCasedCharactersChoice = confirm("Do you want to include lower-case characters in your password?");
+    console.log(lowerCasedCharactersChoice);
+    if (lowerCasedCharactersChoice === true) {
+        passwordOptions = passwordOptions.concat(lowerCasedCharacters);
+        console.log(passwordOptions);
+    }
 
     var validLowerCase = confirm("Do you like lowercase letters in the password?")
     var validSpecialCharacters = confirm("Do you like special characters in the password?")
@@ -132,20 +139,20 @@ function generatePassword() {
         allCharacters = allCharacters.concat(numericCharacters)
     }
     console.log(allCharacters)
-    if(allCharacters.length === 0){
+    if (allCharacters.length === 0) {
         return "Please choose at least one option"
     }
     var password = ""
 
 
-    for(let i =0;i<passwordLength   ;i++){
-        var index = Math.floor (Math.random() * allCharacters.length)   
+    for (let i = 0; i < passwordLength; i++) {
+        var index = Math.floor(Math.random() * allCharacters.length)
         password += allCharacters[index] // password = password + allcharacters[index]
     }
     return password
-    
 
-    
+
+
 }
 
 // Get references to the #generate element
