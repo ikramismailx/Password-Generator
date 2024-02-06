@@ -107,8 +107,14 @@ function getLength () {
 function generatePassword() {
     var length = getLength ();
 
+    // upper-case characters choice
+    var upperCasedCharactersChoice = confirm("Do you want to include upper-case characters in your password?");
+    console.log(upperCasedCharactersChoice);
+    if (upperCasedCharactersChoice === true) {
+      passwordOptions = passwordOptions.concat(upperCasedCharacters);
+     console.log(passwordOptions);
+}
 
-    var validUpperCase = confirm("Do you like uppercase letters in the password?")
     var validLowerCase = confirm("Do you like lowercase letters in the password?")
     var validSpecialCharacters = confirm("Do you like special characters in the password?")
     var validNumbers = confirm("Do you like numeric characters in the password?")
