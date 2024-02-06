@@ -87,6 +87,7 @@ var upperCasedCharacters = [
     'Y',
     'Z'
 ];
+
 // Function to prompt user for password options
 var passwordOptions = [];
 
@@ -135,7 +136,6 @@ function generatePassword() {
         passwordOptions = passwordOptions.concat(specialCharacters);
         console.log(passwordOptions);
     }
-
     
     console.log(passwordOptions);
     var length = parseInt(length);
@@ -143,21 +143,27 @@ function generatePassword() {
 
     // randomising 
 
-    for (let i = 0; i < passwordLength; i++) {
+    for (var i = 0; i < length; i++) {
         var randomIndex = Math.floor(Math.random() * passwordOptions.length)
         var randomCharacter = passwordOptions[randomIndex];
         console.log(randomCharacter);
         var password = password + randomCharacter;
+
     }
+
     return password;
 
 }
+
+// generating password ()
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
+
+
     var password = generatePassword();
     var passwordText = document.querySelector('#password');
 
