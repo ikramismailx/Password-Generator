@@ -144,8 +144,10 @@ function generatePassword() {
     // randomising 
 
     for (let i = 0; i < passwordLength; i++) {
-        var index = Math.floor(Math.random() * allCharacters.length)
-        password += allCharacters[index] // password = password + allcharacters[index]
+        var randomIndex = Math.floor(Math.random() * passwordOptions.length)
+        var randomCharacter = passwordOptions[randomIndex];
+        console.log(randomCharacter);
+        var password = password + randomCharacter;
     }
     return password;
 
